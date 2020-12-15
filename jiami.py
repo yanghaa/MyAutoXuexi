@@ -79,7 +79,7 @@ passwordlist = []
 app_argslist = []
 
 userscfg = ConfigParser()
-userscfg.read(r'D:\\VS Projects\\users.ini', encoding='utf-8')
+userscfg.read(r'config\\users.ini', encoding='utf-8')
 
 # 获得密文
 for i in range(len(userscfg.items("users"))//2):
