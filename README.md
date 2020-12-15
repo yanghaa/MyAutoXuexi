@@ -85,7 +85,12 @@ emu_nox_1 = long
 # 设置为0表示订阅已经全部完成了，无须在订阅（这部分会在以后版本更新为根据上次翻页情况自动设置）
    subscribed_pages_1 = 54
 ~~~
-#### 9. 
+#### 9. 安装运行需要的模块
+~~~
+    python -m pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+    或者
+    python -m pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
+~~~
 #### 8.其他无关运行的小知识
 * **如果需要将pip源设置为国内源，阿里源、豆瓣源、网易源等**  
 在windows操作如下：  
