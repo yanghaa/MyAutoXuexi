@@ -73,8 +73,8 @@
 #### 6. 模拟器设置：可以多个号，同时一起刷（因为订阅耗时间较多，有单独为各个号设置的事先翻页页数）
 ~~~
 # 用户名和密码
-username1 = f6ycdByVgBkCHQwqC+qUxg8LyY2vxC3d00MzqtKtWvJDBJQ+c50xw7Fk2XiY+RIb4YnGrTFq4u+dZC5U9KA+vH40mkHOpWQnIZVSFvQse5Z0si9GilOA/9aNVjV1yz5A88/I2E/yZ0yQMpE7iiHWJPzfHB2vwKr9b0LHb0c9DAE=
-password1 = j9zzXRpPOy6SIfTLijMXCljIo1preGIs26dNEkmlR+H1jxXLQyFPKZ+/gk5hktnoaT0n4jDJGAsi08s7swIv7ucvSXqBkAQt0WYqn7seIZ13Ow79f0kx6MalCRX3/AKtrOhBCcHPtyDbQbvhMWyTrS1PxEIOibz7tONogGDAgzw=
+username1 = f6ycdByVgBkCHQwqC+qU00MzqtKtWvJDBJxg8LyY2vxC3dQ+c50xw7Fk2XiY+RIb4YnGrTFq4u+dZC5U9KA+vH40mkHOpWQnIZVSFvQse5Z0si9GilOA/9aNVjV1yz5A88/I2E/yZ0yQMpE7iiHWJPzfHB2vwKr9b0LHb0c9DAE=
+password1 = j9zzXRpPOy6SIfTLijMXCldNEkmlR+H1jxXLjIo1preGIs26QyFPKZ+/gk5hktnoaT0n4jDJGAsi08s7swIv7ucvSXqBkAQt0WYqn7seIZ13Ow79f0kx6MalCRX3/AKtrOhBCcHPtyDbQbvhMWyTrS1PxEIOibz7tONogGDAgzw=
 # 多开的话，分两种情况：逍遥模拟器为第一类，雷电和Nox为第二类情况。
 # 第一类情况，因为逍遥模拟器是固定名字（'MEmu', 'MEmu_1', 'MEmu_2', 'MEmu_3',...）的，根据实际运行个数修改为emu_mv_1=MEmu, emu_mv_2=MEmu_1,emu_mv_3=MEmu_2等名称。可以参考ini里面
 emu_mv_1 = MEmu
@@ -85,7 +85,7 @@ emu_nox_1 = long
 # 设置为0表示订阅已经全部完成了，无须在订阅（这部分会在以后版本更新为根据上次翻页情况自动设置）
    subscribed_pages_1 = 54
 ~~~
-#### 9. 安装运行需要的模块
+#### 7. 安装运行需要的模块
 ~~~
     python -m pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
     或者
