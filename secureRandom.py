@@ -59,14 +59,17 @@ def encrypt(text, pubkey_path):
 
 # 解密
 def decrypt(text, prikey_path):
-    with open(prikey_path) as f:
-        key = f.read()
-        rsakey = RSA.importKey(key)  # 导入读取到的私钥
-        cipher = Cipher_pkcs1_v1_5.new(rsakey)  # 生成对象
-        # 将密文解密成明文，返回的是一个bytes类型数据，需要自己转换成str
-        cipher_text = cipher.decrypt(base64.b64decode(text), "ERROR")
-        # print(cipher_text)
-        return cipher_text.decode('utf8')
+    try:
+        with open(prikey_path) as f:
+            key = f.read()
+            rsakey = RSA.importKey(key)  # 导入读取到的私钥
+            cipher = Cipher_pkcs1_v1_5.new(rsakey)  # 生成对象
+            # 将密文解密成明文，返回的是一个bytes类型数据，需要自己转换成str
+            cipher_text = cipher.decrypt(base64.b64decode(text), "ERROR")
+            # print(cipher_text)
+            return cipher_text.decode('utf8')
+    except AttributeError as msg:
+        print("有可能提供的秘钥与密文不匹配，请重新生成秘钥以及密文！")
 
 
 if __name__ == '__main__':

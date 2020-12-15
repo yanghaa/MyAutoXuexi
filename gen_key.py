@@ -8,7 +8,7 @@
 @time: 2020-10-16(星期五) 09:03
 @Copyright © 2019. All rights reserved.
 """
-
+from Crypto import Random
 from Crypto.PublicKey import RSA
 from configparser import ConfigParser
  
