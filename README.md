@@ -84,6 +84,7 @@ emu_nox_1 = long
 # 在程序里面有提示上次翻动到第几页有订阅内容
 # 设置为0表示订阅已经全部完成了，无须在订阅（这部分会在以后版本更新为根据上次翻页情况自动设置）
    subscribed_pages_1 = 54
+   
 ~~~
 #### 7. 安装运行需要的模块
 ~~~
@@ -91,7 +92,13 @@ emu_nox_1 = long
     或者
     python -m pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
 ~~~
-#### 8.其他无关运行的小知识
+#### 8. APP版本版本更新到2.19以后，订阅页面变化会导致程序无法自动订阅，造成死循环。已经升级到2.19的，可以注释掉以下代码（目前是539行）
+~~~
+    if module_name == '订阅' and (self.subscribe not in self.run_modules) \
+            and 0 != cfg.getint('users', 'subscribed_pages_' + self.app_args['id']):
+        self.run_modules.append(self.subscribe)
+~~~
+#### 9.其他无关运行的小知识
 * **如果需要将pip源设置为国内源，阿里源、豆瓣源、网易源等**  
 在windows操作如下：  
 （1）打开文件资源管理器(文件夹地址栏中)  
